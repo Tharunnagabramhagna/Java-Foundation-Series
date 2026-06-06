@@ -1,5 +1,5 @@
-// Always avoid infinte Loops
-// Loops => 3 types -> 1) for loop 2) while loop 3) do-while loop
+// Always avoid infinite loops
+// Loops: 3 types -> 1) for loop 2) while loop 3) do-while loop
 
 import java.util.Scanner;
 
@@ -117,6 +117,74 @@ public class Code_05_Loops {
             System.out.println("This is also Good");
         else if (marks <= 59 && marks >= 0)
             System.out.println("This is Good as well");
+
+        // 4) Using while loop print the reverse of a user input digit
+
+        // Ans)
+        System.out.println("\n--Reversing a Digit using while loop--\n");
+        System.out.println("Enter a number : ");
+        int userNum = input.nextInt();
+        int reversedDigit = 0;
+        while (userNum != 0) {
+            int dig = userNum % 10;
+            reversedDigit = reversedDigit * 10 + dig;
+            userNum /= 10;
+        }
+        System.out.println("Reversed Number : " + reversedDigit);
+
+        /*
+         * 5) Write program to take a number as input from the user and check
+         * whether it is a prime or not ?
+         */
+
+        // Ans)
+        boolean isPrime = true;
+        System.out.println("\n--Checking if a number is prime or not--\n");
+        System.out.print("Enter a number : ");
+        int Num = input.nextInt();
+        if (Num <= 1)
+            isPrime = false;
+        else {
+            for (int i = 2; i < Num; i++) {
+                if (Num % i == 0)
+                    isPrime = false;
+            }
+        }
+        if (isPrime)
+            System.out.println(Num + " is a Prime Number");
+        else
+            System.out.println(Num + " is NOT a Prime Number");
+
+        /* 6) Write a program to print n prime numbers */
+
+        // Ans)
+        System.out.println("\n--Printing n prime numbers--\n");
+        System.out.print("Enter a number: ");
+        int Number = input.nextInt();
+
+        if (Number <= 0) {
+            System.out.println("Please enter a positive number.");
+        } else {
+            System.out.println("The first " + Number + " prime numbers:");
+            int count = 0;
+            int check = 2;
+
+            while (count < Number) {
+                boolean flag = true;
+                for (int i = 2; i * i <= check; i++) {
+                    if (check % i == 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    System.out.print(check + " ");
+                    count++;
+                }
+                check++;
+            }
+            System.out.println();
+        }
 
         input.close();
     }
