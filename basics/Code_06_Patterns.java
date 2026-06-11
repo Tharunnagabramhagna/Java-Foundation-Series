@@ -166,5 +166,137 @@ public class Code_06_Patterns {
             }
             System.out.println();
         }
+
+        // 11) Print the below pattern:
+        // Butterfly Pattern
+        // *        *
+        // **      **
+        // ***    ***
+        // ****  ****
+        // **********
+        // **********
+        // ****  ****
+        // ***    ***
+        // **      **
+        // *        *
+        System.out.println("\nPattern-11");
+        n = 5;
+        // top part
+        for(int i = 1; i <= n; i++) {
+            // first part of stars
+            for(int j = 1; j <= i; j++)
+                System.out.print("*");
+            // spaces placed in between 1st and 2nd parts
+            for(int spaces = 1; spaces <= 2*(n-i)+1; spaces++)
+                System.out.print(" ");
+            // second part of stars
+            for(int j = 1; j <= i; j++)
+                System.out.print("*");
+            System.out.println();
+        }
+        // bottom part
+        for(int i = n; i >= 1; i--) {
+            // first part of stars
+            for(int j = i; j >= 1; j--) // (or) for(int j = 1; j <= i; j++)
+                System.out.print("*");
+            // spaces placed in between 1st and 2nd parts => spaces are same
+            for(int spaces = 1; spaces <= 2*(n-i)+1; spaces++)
+                System.out.print(" ");
+            // second part of stars
+            for(int j = i; j >= 1; j--) // (or) for(int j = 1; j <= i; j++)
+                System.out.print("*");
+            System.out.println();
+        }
+
+        // 12) Print the below pattern:
+        // Solid Rhombus
+        //     *****
+        //    *****
+        //   *****
+        //  *****
+        // *****
+        n = 5;
+        System.out.println("\nPattern-12");
+        for(int i = 1; i <= n; i++) {
+            // Prints spaces
+            for(int j = 1 ; j <= n-i; j++)
+                System.out.print(" ");
+            // Prints stars
+            for(int j = 1; j <= n; j++)
+                System.out.print("*");
+            System.out.println();
+        }
+
+        // 13) Print the below pattern:
+        // Number pyramid
+        //     1 
+        //    2 2 
+        //   3 3 3 
+        //  4 4 4 4 
+        // 5 5 5 5 5 
+        System.out.println("\nPattern-13");
+        n = 5;
+        for(int i = 1; i <= n; i++) {
+            for(int spaces = 1; spaces <= n-i; spaces++)
+                System.out.print(" ");
+            for(int j = 1; j <= i; j++)
+                System.out.print(i+ " ");
+            System.out.println();
+        }
+
+        // 14) Print the below pattern:
+        // Palindrome pattern
+        //     1
+        //    212
+        //   32123
+        //  4321234
+        // 543212345
+        n = 5;
+        System.out.println("\nPattern-14");
+        for(int i = 1; i <= n; i++) {
+            // starting spaces
+            for(int spaces = 0; spaces < n-i; spaces++)
+                System.out.print(" ");
+            // first half of numbers => E.g :- 21
+            for(int j = i; j >= 1; j--)
+                System.out.print(j);
+            // second half of numbers => E.g :- 2
+            for(int j = 2; j <= i; j++)
+                System.out.print(j);
+            System.out.println();
+        }
+
+        // 15) Print the below pattern:
+        // Diamond Pattern
+        //    *
+        //   ***
+        //  *****
+        // *******
+        // *******
+        //  *****
+        //   ***
+        //    *
+        System.out.println("\nPattern-15");
+        n = 4;
+        // first half
+        for(int i = 1; i <= n; i++) {
+            // Printing starting spaces
+            for(int spaces = 0; spaces < n-i; spaces++)
+                System.out.print(" ");
+            // Printing stars
+            for(int j = 1; j <= 2*i - 1; j++)
+                System.out.print("*");
+            System.out.println();
+        }
+        // second half
+        for(int i = n; i >= 1 ; i--) {
+            // Printing starting spaces
+            for(int spaces = 0; spaces < n-i; spaces++)
+                System.out.print(" ");
+            // Printing stars
+            for(int j = 1; j <= 2*i-1; j++)
+                System.out.print("*");
+            System.out.println();
+        }
     }
 }
