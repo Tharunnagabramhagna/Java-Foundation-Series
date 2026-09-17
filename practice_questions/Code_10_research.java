@@ -14,11 +14,11 @@ interface Research {
 
 class Professor implements Teaching, Research {
     public void teaching() {
-        System.out.println("Professor is teaching");
+        System.out.println("Professor is teaching.");
     }
 
     public void research() {
-        System.out.println("Professor is doing research");
+        System.out.println("Professor is doing research.");
     }
 }
 
