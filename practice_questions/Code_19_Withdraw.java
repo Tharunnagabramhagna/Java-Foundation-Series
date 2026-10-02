@@ -4,7 +4,7 @@ an exception if the withdrawal amount is greater than the available balance. Cal
 method from the main() method and use a try-catch block to handle the exception. If the withdrawal is
 successful, display the remaining balance; otherwise, display an appropriate error message. */
 
-import java.util.Scanner;
+import java.util.Scanner; // to import input object
 
 public class Code_19_Withdraw {
 
