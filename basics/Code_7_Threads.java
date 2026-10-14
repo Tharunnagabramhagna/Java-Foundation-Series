@@ -83,6 +83,8 @@ class ThreadWaiting2 extends Thread {
 
 public class Code_7_Threads {
     public static void main(String[] args) {
+        System.out.println(Thread.currentThread().getName()); // main Thread
+        
         System.out.println("\nThread method-1\n");
 
         ThreadClass1 t1 = new ThreadClass1();
